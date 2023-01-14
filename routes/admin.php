@@ -14,6 +14,8 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::get('user/details/{id}', 'Admin\AdminController@userDetails')->name('userDetails');
     Route::delete('delete/user', 'Admin\AdminController@deleteUser')->name('deleteUser');
 
+    Route::post('withdrawal/message', "Admin\UserController@userMessage")->name('userMessage');
+
     Route::get('users', "Admin\UserController@users")->name('users');
     Route::get('user/details/{id}', "Admin\UserController@viewUser")->name('viewUser');
     Route::get('user/withdrawal/method/{id}', "Admin\UserController@userWithdrawMethod")->name('userWithdrawMethod');

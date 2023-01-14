@@ -76,9 +76,19 @@
                     <td>{{ $user->address ? : "N/A" }}</td>
                 </tr>
             </table>
+            <br>
 
             <!-- END Latest Friends -->
+           <h5>{{ $user->withdraw_message ? : "N/A" }}</h5>
 
+            <form action="{{ route('admin.userMessage') }}" method="POST">
+                @csrf
+                <input type="hidden" name="user_id" value="{{ $user->id }}">
+                <div class="col-6 mb-3">
+                    <input type="text" class="form-control" name="withdraw_message" value="{{ old('withdraw_message', optional($user)->withdraw_message) }}">
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
 
             <!-- END Latest Projects -->
 

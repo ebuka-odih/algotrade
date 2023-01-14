@@ -51,4 +51,13 @@ class UserController extends Controller
         setting($request->except('_token'))->save();
         return redirect()->back()->with('success', 'Settings updated successfully');
     }
+
+    public function userMessage(Request $request)
+    {
+        $id = $request->user_id;
+        $user = User::findOrFail($id);
+        $user->withdraw_message = $request->withdraw_message;
+        $user->save();
+        return redirect()->back()->with('success', "Message Sent Successfully");
+    }
 }

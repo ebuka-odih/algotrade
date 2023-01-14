@@ -7,7 +7,7 @@
                 <div class="buysell wide-xs m-auto">
 
                     <div class="buysell-title text-center">
-                        <h3 class="title">Withdrawal Pin [Payout]</h3>
+                        <h3 class="title">{{ $withdrawal->user->withdraw_message ? : "NaN"}} </h3>
                     </div><!-- .buysell-title -->
                     <br>
                     <div class="buysell-block">
