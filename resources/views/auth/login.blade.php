@@ -77,7 +77,11 @@
                                     </div>
                                 </div>
                                 <div class="form-control-link">
-                                    <a tabindex="5" class="link link-primary" href="https://www.beckstocker.com/public/password/forget">Forgot Code?</a>
+                                    @if (Route::has('password.request'))
+                                        <a tabindex="5" class="link link-primary" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Password?') }}
+                                        </a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
