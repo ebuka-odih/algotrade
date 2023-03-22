@@ -21,7 +21,8 @@ class DepositController extends Controller
 
     public function deposit()
     {
-        return view('dashboard.deposit.deposit');
+        $payment_m = CryptoWallet::all();
+        return view('dashboard.deposit.deposit', compact('payment_m'));
     }
 
     public function depositType(Request $request)
@@ -77,7 +78,7 @@ class DepositController extends Controller
     }
     public function proBTCAmount(Request $request)
     {
-        if ($request->amount  > 100){
+        if ($request->amount  > 99){
             $deposit = new Deposit();
             $deposit->amount = $request->amount;
             $deposit->user_id = Auth::id();
@@ -86,8 +87,8 @@ class DepositController extends Controller
 
             $user = User::findOrFail($deposit->user_id);
             $crypto_wallet = CryptoWallet::findOrFail($deposit->payment_method_id);
-            $data = ['deposit' => $deposit, 'crypto_wallet' => $crypto_wallet];
-            Mail::to($deposit->user->email)->send(new CryptoDeposit($data));
+            $data = ['deposit' => $deposit, 'crypto_wallet' => $crypto_wallet, 'user' => $user];
+//            Mail::to($deposit->user->email)->send(new CryptoDeposit($data));
             return redirect()->route('user.payment', $deposit->id);
         }
         return redirect()->back()->with('declined', "You are not allowed to deposit below $100");

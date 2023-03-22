@@ -1,75 +1,69 @@
 @extends('dashboard.layout.app')
 @section('content')
 
-<div class="nk-content nk-content-fluid">
-    <div class="container-xl wide-lg">
+    <div class="content-body">
+        <!-- row -->
+        <div class="container-fluid">
 
+            <div class="row">
+                @if(auth()->user()->balance == 0)
+                    <div class="col-xxl-4 col-md-10 offset-lg-4 ">
 
-        <div class="nk-content-body">
-            @if(auth()->user()->balance == 0)
-            <div class="page-invest wide-xs m-auto" id="iv-step-container">
-                <div class="nk-pps-apps">
-                    <div class="nk-pps-result">
-                        <em class="icon icon-circle icon-circle-xxl ni ni-wallet-saving bg-info"></em>
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <h5 class="card-title">Insufficient Funds!</h5>
 
-                        <h4 class="title">No funds in account!</h4>
-
-                        <div class="nk-pps-text md">
-                            <p class="caption-text">We regret that you have no funds in your account. Please make a deposit and try again once funds available.</p>
-                            <p class="sub-text-sm">Deposit instantly using our available payment method.</p>
-                        </div>
-
-                        <div class="nk-pps-action">
-                            <ul class="btn-group-vertical align-center gy-3">
-                                <li><a href="{{ route('user.deposit') }}" class="btn btn-lg btn-mw btn-primary">Deposit Now</a></li>
-                                <li><a href="{{ route('user.dashboard') }}" class="link link-primary">Go to Dashboard</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="nk-pps-notes text-center">
-                            Please feel free to contact us if you face any problem.
+                            </div>
+                            <div class="card-body">
+                                <p class="caption-text">We regret that you have no funds in your account. Please make a deposit and try again once funds available.</p>
+                                <p class="sub-text-sm">Deposit instantly using our available payment method.</p>
+                                <a href="{{ route('user.deposit') }}" class="btn btn-primary">Deposit Now</a>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text text-dark"> Please feel free to contact us if you face any problem.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @else
+                    <div class="col-xxl-4 col-md-10 offset-lg-4 ">
+                        <div class="card">
+                            <div class="card-header border-0 pb-0">
+                                <h4 class="heading mb-0">Purchase Cryptocurrency</h4>
+                            </div>
+                            <hr>
+                            <h4 class="text-center "><span class="badge bg-success">{{ $crypto->name }}</span></h4>
+                            <div class="card-body pt-2">
+                                <div class="d-flex align-items-center justify-content-between my-3">
+                                    <span class="small text-muted">Avbl Balance</span>
+                                    <span class="">{{ auth()->user()->balance }} USD</span>
+                                </div>
+                                <form action="{{ route('user.investAsset') }}" method="POST">
+                                    @csrf
+                                    @if(session()->has('declined'))
+                                        <div class="alert alert-danger">
+                                            {{ session()->get('declined') }}
+                                        </div>
+                                    @endif
+                                    <input type="hidden" name="name" value="{{ $crypto->name }}">
 
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">Amount</span>
+                                        <input type="text" class="form-control" name="amount">
+                                        <span class="input-group-text">USD</span>
+                                    </div>
+
+                                    <div class="mt-3 d-flex justify-content-between">
+                                        <button type="submit" style="background-color: #362465"  class="btn text-white py-2 text-uppercase">Proceed</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
-            @else
-                <div class="page-invest wide-xs m-auto" id="iv-step-container">
-                    <div class="nk-pps-apps">
-                        <div class="nk-pps-result">
-                            <em class="icon icon-circle icon-circle-xxl ni ni-wallet-saving bg-info"></em>
-
-                            <h4 class="title">Enter Amount Of Crypto to Buy!</h4>
-                            <p>Note: You can only buy the amount of Crypto related to your account balance</p>
-
-                            <form action="{{ route('user.investCrypto') }}" method="POST">
-                                @csrf
-                                @if(session()->has('declined'))
-                                    <div class="alert alert-danger">
-                                        {{ session()->get('declined') }}
-                                    </div>
-                                @endif
-                                <input type="hidden" name="stock_id" value="{{ $stocks->id }}">
-                                <div class="form-row">
-                                    <div class="col-12">
-                                        <input type="number" name="amount" class="form-control form-control-lg" placeholder="$">
-                                    </div>
-                                </div>
-                                <div class="form-row mt-2">
-                                   <div class="col-lg-12">
-                                       <button class="btn btn-primary col-lg-12 " type="submit"><span class="text-center">Buy Crypto</span></button>
-                                   </div>
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-
-                </div>
-            @endif
         </div>
-
     </div>
-</div>
+
+
 
 @endsection

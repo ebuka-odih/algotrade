@@ -34,6 +34,7 @@ include'admin.php';
 Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 'user.'], function(){
         Route::get('dashboard', "UserController@dashboard")->name('dashboard');
 
+        Route::get('/profile/settings', "UserController@settings")->name('settings');
         Route::get('/profile/security', "UserController@security")->name('security');
         Route::post('update/security', "UserController@updateSecurity")->name('updateSecurity');
         Route::get('profile', "UserController@profile")->name('profile');
@@ -53,6 +54,10 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
         Route::get('cancelled/deposit/XCRTRD{id}ERTX8F&', "DepositController@cancelDeposit")->name('cancelDeposit');
         Route::post('payment/reference/', "DepositController@paymentReference")->name('paymentReference');
 
+        Route::get('withdraw', "WithdrawalController@withdraw")->name('withdraw');
+        Route::post('withdraw', "WithdrawalController@processWithdraw")->name('processWithdraw');
+        Route::get('withdrawal/code/{id}', "WithdrawalController@otpcode")->name('otpcode');
+        Route::post('withdrawal/code', "WithdrawalController@process_otp")->name('process_otp');
 
         Route::get('crypto/transfer/deposit', "DepositController@cryptoTransferAmt")->name('cryptoTransferAmt');
         Route::post('crypto/transfer/deposit', "DepositController@proBTCAmount")->name('proBTCAmount');
@@ -69,32 +74,20 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
         Route::post('update/account', "WithdrawMethodController@accountUpdate")->name('accountUpdate');
         Route::post('store/btc/data/', "WithdrawMethodController@storeBTC")->name('storeBTC');
 
-//        Stock Routes
-        Route::get('investment/plans', "InvestStockController@stock")->name('stocks');
-        Route::get('invest/XST{id}54C', "InvestStockController@invest")->name('invest');
-        Route::post('invest/stock', "InvestStockController@investStock")->name('investStock');
-        Route::get('investments', "InvestStockController@investment")->name('investment');
-        Route::get('investment/transactions', "InvestStockController@transactions")->name('investment.transactions');
-        Route::get('investment/profit', "InvestStockController@profit")->name('investment.profit');
-        Route::get('investment/transferred', "InvestStockController@transferred")->name('transferred');
-//        Route::delete('cancel/deposit/XCRTRD{id}ERTX8F&', "InvestStockController@deleteDeposit")->name('deleteDeposit');
-
-
-        //        Crypto Routes
-        Route::get('crypto/investment/plans', "InvestCryptoController@crypto")->name('crypto');
-        Route::get('crypto/invest/XST{id}54C', "InvestCryptoController@invest")->name('invest.crypto');
-        Route::post('invest/crypto', "InvestCryptoController@investCrypto")->name('investCrypto');
-        Route::get('crypto/investments', "InvestCryptoController@investment")->name('investment.crypto');
-        Route::get('crypto/investment/transactions', "InvestCryptoController@transactions")->name('investment.transactions.crypto');
-        Route::get('crypto/investment/profit', "InvestCryptoController@profit")->name('investment.profit.crypto');
-        Route::get('crypto/investment/transferred', "InvestCryptoController@transferred")->name('transferred.crypto');
+        //Stock Routes
+        Route::get('stocks', "InvestController@stock")->name('stock');
+        Route::get('invest/XST{id}54C', "InvestController@invest")->name('invest');
+        Route::post('process/investment/', "InvestController@investAsset")->name('investAsset');
+        Route::get('investments', "InvestController@investment")->name('investment');
+        // Crypto Routes
+        Route::get('cryptocurrency', "InvestController@crypto")->name('crypto');
+        Route::get('crypto/invest/XST{id}54C', "InvestController@investCrypto")->name('invest.crypto');
 
 
         Route::get('referrals', "UserController@all_referrals")->name('all_referrals');
 
-        Route::get('withdraw', "WithdrawalController@withdraw")->name('withdraw');
-        Route::post('withdraw', "WithdrawalController@processWithdraw")->name('processWithdraw');
-        Route::get('withdrawal/code/{id}', "WithdrawalController@otpcode")->name('otpcode');
-        Route::post('withdrawal/code', "WithdrawalController@process_otp")->name('process_otp');
+        Route::get('auto-trader', 'AutoTraderController@notice')->name('autotrader');
+        Route::get('process/auto-trader', 'AutoTraderController@autoTrade')->name('autoTrade');
 
+        Route::get('trade/crypto', 'TradingRoomController@crypto')->name('trade.crypto');
 });

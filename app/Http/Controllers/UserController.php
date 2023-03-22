@@ -21,15 +21,22 @@ class UserController extends Controller
         $withdraw_month = Withdrawal::where('status', 1)->whereMonth('created_at', date('m'))->whereYear('created_at', date('Y'))
             ->get(['amount','created_at'])->sum('amount');
         $total_deposit = Deposit::whereUserId(auth()->id())->where('status', 1)->sum('amount');
+        $pending_deposit = Deposit::whereUserId(auth()->id())->where('status', 0)->sum('amount');
         $total_withdraw = Withdrawal::whereUserId(auth()->id())->where('status', 1)->sum('amount');
+        $pending_withdraw = Withdrawal::whereUserId(auth()->id())->where('status', 0)->sum('amount');
         $total_invest = InvestStock::whereUserId(auth()->id())->where('status', 1)->sum('amount');
-        return view('dashboard.index', compact('deposit_month', 'withdraw_month', 'total_deposit', 'total_withdraw', 'total_invest'));
+        $user = Auth::user();
+        return view('dashboard.index', compact('user','deposit_month', 'withdraw_month', 'total_deposit', 'total_withdraw', 'total_invest', 'pending_deposit', 'pending_withdraw'));
     }
 
     public function profile()
     {
         $user = Auth::user();
         return view('dashboard.user.profile', compact('user'));
+    }
+    public function settings()
+    {
+        return view('dashboard.user.settings');
     }
 
     public function updateProfile(Request $request)

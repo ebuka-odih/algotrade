@@ -172,7 +172,7 @@
         <div class="bg-header-dark">
             <div class="content-header bg-white-5">
                 <!-- Logo -->
-                <a class="fw-semibold text-white tracking-wide" href="index.html">
+                <a class="fw-semibold text-white tracking-wide" href="{{ route('index') }}">
               <span class="smini-visible">
                 D<span class="opacity-75">x</span>
               </span>
@@ -246,17 +246,17 @@
                     <li class="nav-main-item">
                         <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                             <i class="nav-main-link-icon fa fa-wrench"></i>
-                            <span class="nav-main-link-name">Package</span>
+                            <span class="nav-main-link-name">Trading Pair</span>
                         </a>
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.package.create') }}">
+                                <a class="nav-main-link" href="{{ route('admin.create.pair') }}">
                                     <span class="nav-main-link-name">Add</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link" href="{{ route('admin.package.index') }}">
-                                    <span class="nav-main-link-name">All Package</span>
+                                <a class="nav-main-link" href="{{ route('admin.pairs') }}">
+                                    <span class="nav-main-link-name">Crypto Pair</span>
                                 </a>
                             </li>
                         </ul>

@@ -19,11 +19,11 @@ class TransactionController extends Controller
     }
     public function deposits()
     {
-        $deposit = Deposit::whereUserId(auth()->id())->get();
+        $deposits = Deposit::whereUserId(auth()->id())->get();
         $dep_count = Deposit::whereUserId(auth()->id())->count();
         $wit_count = Withdrawal::whereUserId(auth()->id())->count();
         $fund_count = Funding::whereUserId(auth()->id())->count();
-        return view('dashboard.transactions.deposits', compact('deposit', 'dep_count', 'wit_count', 'fund_count'));
+        return view('dashboard.deposit.history', compact('deposits', 'dep_count', 'wit_count', 'fund_count'));
     }
     public function withdrawal()
     {
@@ -31,6 +31,6 @@ class TransactionController extends Controller
         $dep_count = Deposit::whereUserId(auth()->id())->count();
         $wit_count = Withdrawal::whereUserId(auth()->id())->count();
         $fund_count = Funding::whereUserId(auth()->id())->count();
-        return view('dashboard.transactions.withdrawal', compact('withdrawal', 'dep_count', 'wit_count', 'fund_count'));
+        return view('dashboard.withdraw.history', compact('withdrawal', 'dep_count', 'wit_count', 'fund_count'));
     }
 }

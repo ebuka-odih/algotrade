@@ -50,6 +50,14 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
 
     Route::resource('wallet', "Admin\AdminCryptoWallet");
 
+    Route::get('trading/pair', "Admin\TradingPairController@index")->name('pairs');
+    Route::get('stock/trading/pair', "Admin\TradingPairController@stockList")->name('stockList');
+    Route::get('indexes/trading/pair', "Admin\TradingPairController@indexesList")->name('indexesList');
+    Route::get('create/trading/pair', "Admin\TradingPairController@create")->name('create.pair');
+    Route::post('store/crypto/pair', "Admin\TradingPairController@store")->name('store.pair');
+    Route::post('store/stock/pair', "Admin\TradingPairController@storeStock")->name('storeStock');
+    Route::post('store/indexes/pair', "Admin\TradingPairController@storeIndexes")->name('storeIndexes');
+
 
 });
 

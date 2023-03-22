@@ -89,7 +89,7 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         $currency = Currency::convert()
             ->from('USD')
-            ->to('EUR')
+            ->to('BTC')
             ->get();
         return floor($currency * $this->balance);
     }

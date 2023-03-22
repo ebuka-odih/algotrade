@@ -1,115 +1,108 @@
 @extends('dashboard.layout.app')
 @section('content')
 
+    <div class="content-body" style="min-height: 996px;">
+        <!-- row -->
+        <div class="container-fluid">
 
-    <div class="nk-content nk-content-fluid">
-        <div class="container-xl wide-lg">
-
-
-            <div class="nk-content-body">
-                <div class="nk-block-head">
-                    <div class="nk-block-head-sub"><span>Investment</span></div>
-                    <div class="nk-block-between-md g-4">
-                        <div class="nk-block-head-content">
-                            <h2 class="nk-block-title fw-normal">Invested Crypto</h2>
-                            <div class="nk-block-des">
-                                <p>At a glance summary of your investment.</p>
-                            </div>
-                        </div>
-                        <div class="nk-block-head-content">
-                            <ul class="nk-block-tools gx-3">
-                                <li class="order-md-last"><a href="{{ route('user.crypto') }}" class="btn btn-primary"><span>Invest &amp; Earn</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
-                                <li><a href="{{ route('user.deposit') }}" class="btn btn-light btn-white"><span>Deposit Funds</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
+            <div class="col-xl-12">
+                <div class="card Infra">
+                    <div class="card-header border-0">
+                        <div class="site-filters clearfix center m-b40">
+                            <ul class="filters" data-bs-toggle="buttons">
+                                <li class="btn">
+                                    <a href="{{ route('user.investment') }}" class="site-button">Stock Investments</a>
+                                </li>
+                                <li class="btn active">
+                                    <a href="{{ route('user.investment.crypto') }}" class="site-button">Crypto Investments</a>
+                                </li>
+                                <li data-filter=".gaming" class="btn">
+                                    <a href="javascript:void(0);" class="site-button">Precious Metal</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="nk-block">
-                    <div class="row gy-gs">
-                        <!-- <div class="col-md-6 col-lg-5 col-xxl-4">
-                             <div class="card card-full card-bordered card-wg on-left is-primary">
-                                 <div class="card-inner">
-                                     <div class="nk-wgacc">
-                                         <div class="nk-wgacc-title text-base">
-                                             Investment Account
-                                             <em class="icon ni ni-info fs-13px text-soft nk-tooltip" title="The available balance in your investment account."></em>
-                                         </div>
-                                         <div class="nk-wgacc-group flex-lg-nowrap gx-4">
-                                             <div class="nk-wgacc-sub">
-                                                 <div class="nk-wgacc-amount">
-                                                     <div class="number number-md">0.00 <small class="currency">USD</small></div>
-                                                 </div>
-                                                 <div class="nk-wgacc-subtitle">Available Funds</div>
-                                             </div>
-                                             <div class="nk-wgacc-sub">
-                                                 <span class="nk-wgacc-sign text-soft"><em class="icon ni ni-plus"></em></span>
-                                                 <div class="nk-wgacc-amount">
-                                                     <div class="number number-sm">0.00</div>
-                                                 </div>
-                                                 <div class="nk-wgacc-subtitle">Locked</div>
-                                             </div>
-                                         </div>
-                                     </div>
-                                     <div class="card-action">
-                                         <ul class="nk-block-tools gx-4">
-                                             <li><a href="https://www.beckstocker.com/public/investment/payout" class="btn btn-secondary iv-payout"><span>Transfer Funds</span> <em class="icon ni ni-arrow-long-right"></em></a></li>
-                                         </ul>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div> -->
-                        <div class="col-md-6 col-lg-7 col-xxl-8">
-                            <div class="card card-bordered">
-                                <div class="card-inner-group">
-                                    <div class="card-inner">
-                                        <div class="row gy-gs">
-                                            <div class="col-md-12">
-                                                <div class="nk-wgacc">
-                                                    <div class="nk-wgacc-group flex-md-nowrap gx-4">
-                                                        <div class="flex-shrink-0">
-                                                            <div class="nk-wgacc-title text-base">
-                                                                Amount Invested
-                                                                <em class="icon ni ni-info fs-13px text-soft nk-tooltip" title="" data-original-title="The investment currently actived without pending."></em>
-                                                            </div>
-                                                            <div class="nk-wgacc-group flex-md-nowrap gx-4">
-                                                                <div class="nk-wgacc-sub">
-                                                                    <div class="nk-wgacc-amount">
-                                                                        <div class="number number-md">{{ $invested_stock }} <small class="currency">USD</small></div>
-                                                                    </div>
-                                                                    <div class="nk-wgacc-subtitle">Currently Invested</div>
-                                                                </div>
-                                                                <!-- <div class="nk-wgacc-sub">
-                                                                     <span class="nk-wgacc-sign text-soft"><em class="icon ni ni-plus"></em></span>
-                                                                     <div class="nk-wgacc-amount">
-                                                                         <div class="number number-sm">0.00</div>
-                                                                     </div>
-                                                                     <div class="nk-wgacc-subtitle">Approx Profit</div>
-                                                                 </div> -->
-                                                            </div>
-                                                        </div>
-                                                        <div class="nk-wgacc-sub flex-grow-1 ml-lg-1 ml-xxl-5 d-md-none d-lg-block">
-                                                            <div class="nk-wgacc-ck lg mb-0"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                                                                <canvas class="chart-liner chartjs-render-monitor" id="dailyInvestment" style="display: block; width: 460px; height: 95px;" width="460" height="95"></canvas>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-12">
+                    <div class="row main-card">
+                        <div class="swiper crypto-Swiper position-relative overflow-hidden swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden">
+                            <div class="swiper-wrapper " id="swiper-wrapper-18f0cc7ab4ddf97f" aria-live="polite">
+                                <div class="swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 4" style="width: 252.5px; margin-right: 30px;">
+                                    <div class="card coin-card bg-secondary">
+                                        <div class="back-image">
+                                            <svg width="121" height="221" viewBox="0 0 121 221" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="135.5" cy="84.5" r="40" stroke="#BE7CFF"></circle>
+                                                <circle cx="136" cy="85" r="135.5" stroke="#BE7CFF"></circle>
+                                                <circle cx="136" cy="85" r="109.5" stroke="#BE7CFF"></circle>
+                                                <circle cx="136" cy="85" r="86.5" stroke="#BE7CFF"></circle>
+                                                <circle cx="136" cy="85" r="64.5" stroke="#BE7CFF"></circle>
+                                            </svg>
+                                        </div>
+                                        <div class="card-body p-4 ">
+                                            <div class="title">
+                                                <h4>Investment</h4>
+                                                <img height="50" width="50" src="{{ asset('img/dollar-sign-white.svg') }}" alt="">
+                                            </div>
+                                            <div class="chart-num">
+                                                <h2>@convert(auth()->user()->invest_bal)</h2>
+                                            </div>
+                                            <hr>
+                                            <div class="chart-num">
+                                                <h2>Profit</h2>
+                                                <span style="padding-right: 30px;">@convert(auth()->user()->profit)</span>
+                                                <span class="pull-r">+ {{ $percent }}%</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-inner">
-                                        <ul class="nk-wgacc-nav">
-                                            <li><a href="{{ route('user.investment.transactions.crypto') }}"><em class="icon ni ni-notes-alt"></em> <span>Transactions</span></a></li>
-                                            <!--  <li><a href="https://www.beckstocker.com/public/investment/history"><em class="icon ni ni-file-check"></em> <span>History</span></a></li> -->
-                                        </ul>
-                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- /row -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Investments</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <div id="example4_wrapper" class="dataTables_wrapper no-footer">
+
+                                    <table id="example4" class="display dataTable no-footer" style="min-width: 845px" role="grid" aria-describedby="example4_info">
+                                        <thead>
+                                        <tr role="row">
+                                            <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Student Name: activate to sort column ascending" style="width: 185.297px;">Date</th>
+                                            <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Invoice number: activate to sort column ascending" style="width: 202.852px;">Asset</th>
+                                            <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Invoice number: activate to sort column ascending" style="width: 202.852px;">Size</th>
+                                            <th class="sorting" tabindex="0" aria-controls="example4" rowspan="1" colspan="1" aria-label="Status : activate to sort column ascending" style="width: 108.891px;">Status </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($transact as $item)
+                                            <tr role="row" class="odd">
+                                                <td>{{ date('Y, M d', strtotime($item->created_at)) }}</td>
+
+                                                <td class="text-capitalize">{{ $item->crypto->name }}</td>
+                                                <td>
+                                                    <strong>${{ $item->amount }}</strong>
+                                                </td>
+                                                <td>{!! $item->status() !!}</td>
+                                            </tr>
+                                        @endforeach
+
+                                        </tbody>
+                                    </table>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
 
             </div>
 
