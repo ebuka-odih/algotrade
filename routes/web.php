@@ -91,4 +91,11 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
 
         Route::get('trade/crypto', 'TradingRoomController@crypto')->name('trade.crypto');
         Route::post('place/trade/crypto', 'TradingRoomController@placeTrade')->name('placeTrade');
+        Route::get('trade/stock', 'TradingRoomController@stock')->name('trade.stock');
+        Route::post('place/trade/stock', 'TradingRoomController@stockTrade')->name('stockTrade');
+        Route::get('trade/forex', 'TradingRoomController@forex')->name('trade.forex');
+        Route::post('place/trade/forex', 'TradingRoomController@forexTrade')->name('forexTrade');
+
+
+
 });

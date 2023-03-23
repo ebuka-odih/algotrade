@@ -315,16 +315,16 @@
                         <span class="nav-text">Trading Room</span>
                     </a>
                     <ul aria-expanded="false">
-                        <li><a href="exchange.html">Forex</a></li>
-                        <li><a href="crypto.html">Stocks</a></li>
+                        <li><a href="{{ route('user.trade.forex') }}">Forex</a></li>
+                        <li><a href="{{ route('user.trade.stock') }}">Stocks</a></li>
                         <li><a href="{{ route('user.trade.crypto') }}">Crypto</a></li>
                     </ul>
                 </li>
-                <li><a href="#" >
-                        <i class="material-icons">history</i>
-                        <span class="nav-text">Orders </span>
-                    </a>
-                </li>
+{{--                <li><a href="#" >--}}
+{{--                        <i class="material-icons">history</i>--}}
+{{--                        <span class="nav-text">Orders </span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
 
 
             </ul>

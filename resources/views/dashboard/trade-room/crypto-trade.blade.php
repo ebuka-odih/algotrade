@@ -26,7 +26,7 @@
                     <div class="card-body pt-2">
                         <div class="d-flex align-items-center justify-content-between my-3">
                             <span class="small text-muted">Avbl Balance</span>
-                            <span class="">{{ auth()->user()->balance }} USD</span>
+                            <span class="">@convert(auth()->user()->balance) USD</span>
                         </div>
                         <form action="{{ route('user.placeTrade') }}" method="POST">
                             @csrf
@@ -123,7 +123,7 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header border-0 pb-2 flex-wrap">
-                        <h4 class="heading">Trade Status</h4>
+                        <h4 class="heading">Trade History</h4>
                         <nav>
                             <div class="order nav nav-tabs" id="nav-tab" role="tablist">
                                 <button class="nav-link active" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-selected="true">Order</button>
@@ -174,78 +174,35 @@
                             <div class="tab-pane fade" id="nav-trade" role="tabpanel" aria-labelledby="nav-trade-tab">
                                 <div class="table-responsive dataTabletrade">
                                     <div id="example3_wrapper" class="dataTables_wrapper no-footer">
-                                        <div class="dataTables_length" id="example3_length">
-                                            <label>Show <select name="example3_length" aria-controls="example3" class="">
-                                                    <option value="10">10</option>
-                                                    <option value="25">25</option>
-                                                    <option value="50">50</option>
-                                                    <option value="100">100</option>
-                                                </select> entries </label>
-                                        </div>
-                                        <div id="example3_filter" class="dataTables_filter">
-                                            <label>Search: <input type="search" class="" placeholder="" aria-controls="example3">
-                                            </label>
-                                        </div>
+
                                         <table id="example3" class="table display dataTable no-footer" style="min-width:845px" role="grid" aria-describedby="example3_info">
                                             <thead>
                                             <tr role="row">
-                                                <th class="sorting_asc" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Date: activate to sort column descending" style="width: 0px;">Date</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Trade: activate to sort column ascending" style="width: 0px;">Trade</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Side: activate to sort column ascending" style="width: 0px;">Side</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 0px;">Price</th>
-                                                <th class="sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 0px;">Amount</th>
-                                                <th class="text-end sorting" tabindex="0" aria-controls="example3" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 0px;">Action</th>
+                                                <th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Date: activate to sort column descending" style="width: 139.82px;">Date</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Trade: activate to sort column ascending" style="width: 218.406px;">Symbol</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Side: activate to sort column ascending" style="width: 114.297px;">Size</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Price: activate to sort column ascending" style="width: 74.6094px;">Entry Price</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 99.7812px;">Leverage</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 99.7812px;">Timeframe</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 99.7812px;">TP/SL</th>
+                                                <th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Amount: activate to sort column ascending" style="width: 99.7812px;">Status</th>
+                                                <th class="text-end sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Action: activate to sort column ascending" style="width: 87.2109px;">Profit</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">Airi Satou</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>33</td>
-                                                <td>2008/11/28</td>
-                                                <td class="text-end">$162,700</td>
-                                            </tr>
-                                            <tr role="row" class="even">
-                                                <td class="sorting_1">Ashton Cox</td>
-                                                <td>Junior Technical Author</td>
-                                                <td>San Francisco</td>
-                                                <td>66</td>
-                                                <td>2009/01/12</td>
-                                                <td class="text-end">$86,000</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">Brielle Williamson</td>
-                                                <td>Integration Specialist</td>
-                                                <td>New York</td>
-                                                <td>61</td>
-                                                <td>2012/12/02</td>
-                                                <td class="text-end">$372,000</td>
-                                            </tr>
-                                            <tr role="row" class="even">
-                                                <td class="sorting_1">Cedric Kelly</td>
-                                                <td>Senior Javascript Developer</td>
-                                                <td>Edinburgh</td>
-                                                <td>22</td>
-                                                <td>2012/03/29</td>
-                                                <td class="text-end">$433,060</td>
-                                            </tr>
-                                            <tr role="row" class="odd">
-                                                <td class="sorting_1">Garrett Winters</td>
-                                                <td>Accountant</td>
-                                                <td>Tokyo</td>
-                                                <td>63</td>
-                                                <td>2011/07/25</td>
-                                                <td class="text-end">$170,750</td>
-                                            </tr>
-                                            <tr role="row" class="even">
-                                                <td class="sorting_1">Tiger Nixon</td>
-                                                <td>System Architect</td>
-                                                <td>Edinburgh</td>
-                                                <td>61</td>
-                                                <td>2011/04/25</td>
-                                                <td class="text-end">$320,800</td>
-                                            </tr>
+                                            @foreach($closed_trades as $item)
+                                                <tr class="odd" role="row">
+                                                    <td class="sorting_1">{{ $item->created_at }}</td>
+                                                    <td>{{ $item->trading_pair->pair }}</td>
+                                                    <td>$@convert($item->amount)</td>
+                                                    <td>{{ $item->price }}</td>
+                                                    <td>{{ $item->leverage }}</td>
+                                                    <td>{{ $item->execution_time }} Secs</td>
+                                                    <td>{{ $item->tp ? : "-" }}/ {{ $item->sl ? : "-" }}</td>
+                                                    <td class="pull-right">{!! $item->status() !!}</td>
+                                                    <td>{{ $item->profit }}</td>
+                                                </tr>
+                                            @endforeach
                                             </tbody>
                                         </table>
                                         <div class="dataTables_info" id="example3_info" role="status" aria-live="polite">Showing 1 to 6 of 6 entries</div>
