@@ -256,7 +256,7 @@
                             </li>
                             <li class="nav-main-item">
                                 <a class="nav-main-link" href="{{ route('admin.pairs') }}">
-                                    <span class="nav-main-link-name">Crypto Pair</span>
+                                    <span class="nav-main-link-name">Trading Pair</span>
                                 </a>
                             </li>
                         </ul>

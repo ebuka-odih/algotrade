@@ -90,4 +90,5 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
         Route::get('process/auto-trader', 'AutoTraderController@autoTrade')->name('autoTrade');
 
         Route::get('trade/crypto', 'TradingRoomController@crypto')->name('trade.crypto');
+        Route::post('place/trade/crypto', 'TradingRoomController@placeTrade')->name('placeTrade');
 });

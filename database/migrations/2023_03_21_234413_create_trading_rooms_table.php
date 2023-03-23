@@ -18,8 +18,9 @@ class CreateTradingRoomsTable extends Migration
             $table->timestamps();
             $table->bigInteger('user_id');
             $table->bigInteger('trading_pair_id');
-            $table->string('type');
+            $table->string('type'); //1 crypto, 2 stock, 3 forex
 
+            $table->string('trade_type'); // buy or sell
             $table->double('price')->nullable();
             $table->double('size')->nullable();
             $table->string('sl')->nullable();
