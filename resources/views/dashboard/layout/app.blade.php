@@ -8,9 +8,6 @@
     <meta name="author" content="">
     <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="CryptoZone : Crypto Trading Admin Bootstrap 5 Template">
-    <meta property="og:title" content="CryptoZone  :Crypto Trading Admin Bootstrap 5 Template">
-    <meta property="og:description" content="CryptoZone  :Crypto Trading Admin  Admin Bootstrap 5 Template">
     <meta property="og:image" content="social-image.png">
     <meta name="format-detection" content="telephone=no">
 
@@ -113,107 +110,7 @@
 
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-end">
-                                            <div id="DZ_W_TimeLine02" class="widget-timeline dz-scroll style-1 p-3 height370">
-                                                <h4 class="text-center border-bottom pb-2">Notications</h4>
-                                                <ul class="timeline">
-                                                    <li>
-                                                        <div class="timeline-badge primary"></div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>10 minutes ago</span>
-                                                            <h6 class="mb-0">Youtube, a video-sharing website, goes live <strong class="text-primary">$500</strong>.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge info">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">New order placed <strong class="text-info">#XF-2356.</strong></h6>
-                                                            <p class="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge danger">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>30 minutes ago</span>
-                                                            <h6 class="mb-0">john just buy your product <strong class="text-warning">Sell $250</strong></h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge success">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>15 minutes ago</span>
-                                                            <h6 class="mb-0">StumbleUpon is acquired by eBay. </h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge warning">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge dark">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge primary"></div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>10 minutes ago</span>
-                                                            <h6 class="mb-0">Youtube, a video-sharing website, goes live <strong class="text-primary">$500</strong>.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge info">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">New order placed <strong class="text-info">#XF-2356.</strong></h6>
-                                                            <p class="mb-0">Quisque a consequat ante Sit amet magna at volutapt...</p>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge danger">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>30 minutes ago</span>
-                                                            <h6 class="mb-0">john just buy your product <strong class="text-warning">Sell $250</strong></h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge success">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>15 minutes ago</span>
-                                                            <h6 class="mb-0">StumbleUpon is acquired by eBay. </h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge warning">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="timeline-badge dark">
-                                                        </div>
-                                                        <a class="timeline-panel text-muted" href="javascript:void(0);">
-                                                            <span>20 minutes ago</span>
-                                                            <h6 class="mb-0">Mashable, a news website and blog, goes live.</h6>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
+
                                             <a class="all-notification" href="javascript:void(0);">See all notifications <i class="ti-arrow-end"></i></a>
                                         </div>
                                     </li>
@@ -320,11 +217,11 @@
                         <li><a href="{{ route('user.trade.crypto') }}">Crypto</a></li>
                     </ul>
                 </li>
-{{--                <li><a href="#" >--}}
-{{--                        <i class="material-icons">history</i>--}}
-{{--                        <span class="nav-text">Orders </span>--}}
-{{--                    </a>--}}
-{{--                </li>--}}
+                <li><a href="{{ route('user.nft.index') }}" >
+                        <i class="material-icons">camera</i>
+                        <span class="nav-text">NFT </span>
+                    </a>
+                </li>
 
 
             </ul>

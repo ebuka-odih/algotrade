@@ -38,6 +38,7 @@ Route::group(['middleware' => ['auth', 'verified', 'admin'], 'prefix' => 'admin'
     Route::resource('stocks', "Admin\StockController");
     Route::resource('crypto', "Admin\AdminCryptoController");
     Route::resource('payment-method', "Admin\PaymentMethodController");
+    Route::resource('nftlisting', "Admin\AdminListNFTController");
 
     Route::get('fund/user', "Admin\AdminFundingController@fund")->name('fund');
     Route::post('fund/user', "Admin\AdminFundingController@sendFund")->name('sendFund');

@@ -96,6 +96,7 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
         Route::get('trade/forex', 'TradingRoomController@forex')->name('trade.forex');
         Route::post('place/trade/forex', 'TradingRoomController@forexTrade')->name('forexTrade');
 
-
+        Route::get('nft/marketplace', 'ListNFTController@index')->name('nft.index');
+        Route::get('nft/details/{id}', 'ListNFTController@show')->name('nft.show');
 
 });
