@@ -98,5 +98,7 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
 
         Route::get('nft/marketplace', 'ListNFTController@index')->name('nft.index');
         Route::get('nft/details/{id}', 'ListNFTController@show')->name('nft.show');
+        Route::post('buy/buyNft', 'ListNFTController@buyNft')->name('buyNft');
+        Route::get('nft/collections', 'ListNFTController@collections')->name('collections');
 
 });

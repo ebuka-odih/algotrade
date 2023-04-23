@@ -222,6 +222,11 @@
                         <span class="nav-text">NFT </span>
                     </a>
                 </li>
+                <li><a href="{{ route('user.nft.index') }}" >
+                        <i class="material-icons">clear_all</i>
+                        <span class="nav-text">Collections </span>
+                    </a>
+                </li>
 
 
             </ul>

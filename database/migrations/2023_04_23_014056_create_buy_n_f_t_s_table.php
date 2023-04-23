@@ -19,6 +19,7 @@ class CreateBuyNFTSTable extends Migration
             $table->bigInteger('list_n_f_t_id');
             $table->bigInteger('user_id');
             $table->integer('status')->default(0);
+            $table->string('trans_hash')->nullable();
         });
     }
 

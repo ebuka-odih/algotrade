@@ -72,32 +72,39 @@
 
                                             </div>
                                             <div class="col-lg-10 mt-2">
-                                                {!! QrCode::size(100)->generate($nft->crypto_wallet->value); !!}
+                                                {!! QrCode::size(100)->generate($nft->crypto_wallet->value); !!} <br>
+                                                <button type="button" class="btn btn-primary btn-sm mb-2 mt-4" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Paid</button>
+                                                <p class="text-danger">Click Paid after your purchase</p>
                                             </div>
 
-
-                                            <div class="d-flex"><a  class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Buy item</a></div>
-
-                                            <div class="collapse" id="collapseExample">
-                                                <div class="card card-body">
-                                                    <h3 class="mb-4">Pay to the wallet below</h3>
-                                                    <hr>
-                                                    <h5>{{ $nft->crypto_wallet->name }}</h5>
-                                                    <div class="input-group">
-                                                        <input type="text" readonly class="form-control" id="foo" value="{{ $nft->crypto_wallet->value }}">
-
-                                                        <div class="input-group-prepend">
-                                                            <button class="btn input-group-text" data-clipboard-target="#foo">
-                                                                Copy
+                                            <div class="modal fade" id="exampleModalCenter" style="display: none;" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title">Transaction Hash</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal">
                                                             </button>
                                                         </div>
+                                                        <form action="{{ route('user.buyNft') }}" method="POST">
+                                                            @csrf
+                                                        <div class="modal-body">
+                                                            <input type="hidden" name="nft_id" value="{{ $nft->id }}">
+
+                                                            <label for="">Transaction Hash</label>
+                                                            <input type="text" class="form-control" name="trans_hash" placeholder="Enter Trans Hash">
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-danger light" data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                                        </div>
+                                                        </form>
                                                     </div>
-                                                    <div class="col-lg-10 mt-2">
-                                                        {!! QrCode::size(200)->generate($nft->crypto_wallet->value); !!}
-                                                    </div>
-                                                    <a href="" class="btn btn-sm btn-primary mt-2">Paid</a>
                                                 </div>
                                             </div>
+
+
+
                                         </div>
                                     </div>
                                 </div>

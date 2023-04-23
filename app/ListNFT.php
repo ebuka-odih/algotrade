@@ -12,4 +12,8 @@ class ListNFT extends Model
     {
         return $this->belongsTo(CryptoWallet::class, "crypto_wallet_id");
     }
+    public function buy_nft()
+    {
+        return $this->hasMany(BuyNFT::class);
+    }
 }
