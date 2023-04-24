@@ -128,24 +128,21 @@
                             <li id="menu-item-2190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="{{ route('stocks')}}">Stocks</a></li>
                             <li id="menu-item-2197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197"><a href="{{ route('crypto')}}">Crypto</a></li>
                             <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('forex')}}">Forex</a></li>
-                            <li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="what-is-arbitrage/index.html">Arbitrage</a></li>
+                            <li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="{{ route('arbitrage')}}">Arbitrage</a></li>
                         </ul>
                     </li>
 
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="smart-levels/index.html">Earn interest</a></li>
-                    <li id="menu-item-2193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2193"><a href="exchange/index.html">Exchange</a></li>
                     <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="nfts/index.html">NFT</a></li>
                     <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
                         <ul class="sub-menu">
-                            <li id="menu-item-2190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="metaverse/index.html">Metaverse</a></li>
-                            <li id="menu-item-2197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197"><a href="dao/index.html">DAO</a></li>
+
                             <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="about/index.html">Company</a></li>
-                            <li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="what-is-arbitrage/index.html">Arbitrage</a></li>
+
                             <li id="menu-item-374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="partners/index.html">Partnership</a></li>
-                            <li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="career/index.html">Careers</a></li>
+
                             <li id="menu-item-1737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737"><a href="arbismart-license/index.html">Authorizations</a></li>
-                            <li id="menu-item-754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-754"><a href="arbismart-in-press/index.html">Arbismart in Press</a></li>
-                            <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="blog/index.html">Blog</a></li>
+
                             <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="faq/index.html">FAQ</a></li>
                             <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="contact/index.html">Support</a></li>
                         </ul>
