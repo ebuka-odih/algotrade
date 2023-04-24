@@ -16,6 +16,8 @@ class CreatePreciousMetalsTable extends Migration
         Schema::create('precious_metals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->text('description')->nullable();
         });
     }
 

@@ -14,18 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::view('/', 'pages.index')->name('index');
-Route::view('/markets', 'pages.market')->name('market');
-Route::view('/about', 'pages.about')->name('about');
-Route::view('/careers', 'pages.career')->name('career');
-Route::view('/contact', 'pages.contact')->name('contact');
-Route::view('/education', 'pages.education')->name('education');
-Route::view('/help-center', 'pages.help-center')->name('help-center');
-Route::view('/customers', 'pages.customers')->name('customers');
-Route::view('/roadmap', 'pages.roadmap')->name('roadmap');
-Route::view('/legal-docs', 'pages.legal-docs')->name('legal-docs');
-Route::view('/faq', 'pages.faqs')->name('faq');
-Route::view('/terms-and-conditions', 'pages.terms')->name('terms');
-Route::view('/privacy-and-policy', 'pages.policy')->name('policy');
+Route::view('/stocks', 'pages.trading.stocks')->name('stocks');
+Route::view('/crypto', 'pages.trading.crypto')->name('crypto');
+
+
+
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
