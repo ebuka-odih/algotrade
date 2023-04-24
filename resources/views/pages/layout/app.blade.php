@@ -62,6 +62,9 @@
         position: relative;
         top: -7px;
         }
+        .marquee {
+            visibility: hidden;
+        }
 
     </style>
     <link rel='stylesheet' id='wp-block-library-css' href='{{ asset('wp-includes/css/dist/block-library/style.mincfaa.css?ver=5.7.6') }}' media='all' />
@@ -105,13 +108,12 @@
                     </li>
 
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('exchange') }}">Exchange</a></li>
-                    <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="nfts/index.html">NFT</a></li>
+                    <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">NFT</a></li>
                     <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
                         <ul class="sub-menu">
 
                             <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="about/index.html">Company</a></li>
 
-                            <li id="menu-item-374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="partners/index.html">Partnership</a></li>
 
                             <li id="menu-item-1737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737"><a href="arbismart-license/index.html">Authorizations</a></li>
 
@@ -259,25 +261,8 @@
 </div>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="c38d97813be678f3529ec887-text/javascript"></script>
 
-<script type=‘text/javascript’>
-  window._tfa = window._tfa || [];
-  window._tfa.push({notify: ‘event’, name: ‘page_view’, id: 1474797});
-  !function (t, f, a, x) {
-         if (!document.getElementById(x)) {
-            t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
-         }
-  }(document.createElement(‘script’),
-  document.getElementsByTagName(‘script’)[0],
-  ‘//cdn.taboola.com/libtrc/unip/1474797/tfa.js’,
-  ‘tb_tfa_script’);
-</script>
 
-<script type="c38d97813be678f3529ec887-text/javascript">
-        window.intercomSettings = {
-            app_id: "ik4voqgl",
-            custom_launcher_selector:'#start_chat'
-        };
-    </script>
+
 <script type="c38d97813be678f3529ec887-text/javascript">(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ik4voqgl';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
 <!--googleoff: all--><div id="cookie-law-info-bar" data-nosnippet="true"><span>This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. <a role='button' class="cli_settings_button" style="margin:5px 20px 5px 20px">Cookie settings</a><a role='button' data-cli_action="accept" id="cookie_action_close_header" class="medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button wt-cli-accept-btn" style="margin:5px">ACCEPT</a></span></div><div id="cookie-law-info-again" data-nosnippet="true"><span id="cookie_hdr_showagain">Privacy &amp; Cookies Policy</span></div><div class="cli-modal" data-nosnippet="true" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
     <div class="cli-modal-dialog" role="document">
@@ -341,7 +326,7 @@
 <script type="c38d97813be678f3529ec887-text/javascript" src='{{ asset('wp-content/themes/arbismart_4.0/assets/plugins/forms/forms6ed7.js?v=1&amp;ver=1.0.0') }}' id='form-js'></script>
 <script type="c38d97813be678f3529ec887-text/javascript" src='{{ asset('wp-content/themes/arbismart_4.0/assets/js/main6ed7.js?v=1&amp;ver=1.0.0') }}' id='main-js'></script>
 <script src="{{ asset('cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js') }}" data-cf-settings="c38d97813be678f3529ec887-|49" defer=""></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7b35c864bb9424e9","version":"2023.3.0","b":1,"token":"113fa6373985428085b7720e7e837b86","si":100}' crossorigin="anonymous"></script>
+{{--<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vb26e4fa9e5134444860be286fd8771851679335129114" integrity="sha512-M3hN/6cva/SjwrOtyXeUa5IuCT0sedyfT+jK/OV+s+D0RnzrTfwjwJHhd+wYfMm9HJSrZ1IKksOdddLuN6KOzw==" data-cf-beacon='{"rayId":"7b35c864bb9424e9","version":"2023.3.0","b":1,"token":"113fa6373985428085b7720e7e837b86","si":100}' crossorigin="anonymous"></script>--}}
 </body>
 
 <!-- Mirrored from arbismart.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 06 Apr 2023 00:06:50 GMT -->
