@@ -57,7 +57,7 @@
         width: 183px;
         height: 56px;
         display: block;
-    
+
         background-size: contain;
         position: relative;
         top: -7px;
@@ -78,35 +78,7 @@
 
 
     <meta name="msapplication-TileImage" content="https://arbismart.com/wp-content/uploads/2020/02/favicon-arbismart.ico" />
-    <script defer type="c38d97813be678f3529ec887-text/javascript">
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-135613626-1', 'auto');
-            ga('send', 'pageview');
-        </script>
-
-    <script defer type="c38d97813be678f3529ec887-text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-TMW9SZG');</script>
-
-
-    <script type=‘text/javascript’>
-          window._tfa = window._tfa || [];
-          window._tfa.push({notify: ‘event’, name: ‘page_view’, id: 1474797});
-          !function (t, f, a, x) {
-                 if (!document.getElementById(x)) {
-                    t.async = 1;t.src = a;t.id=x;f.parentNode.insertBefore(t, f);
-                 }
-          }(document.createElement(‘script’),
-          document.getElementsByTagName(‘script’)[0],
-          ‘//cdn.taboola.com/libtrc/unip/1474797/tfa.js’,
-          ‘tb_tfa_script’);
-        </script>
 
 </head>
 <body class="home page-template-default page page-id-5 language-en arbismart-home">
@@ -132,7 +104,7 @@
                         </ul>
                     </li>
 
-                    <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="smart-levels/index.html">Earn interest</a></li>
+                    <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="nfts/index.html">NFT</a></li>
                     <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
                         <ul class="sub-menu">
@@ -148,10 +120,10 @@
                         </ul>
                     </li>
                 </ul> <div class="item">
-                    <a class="ui-nav-link" href="https://dashboard.arbismart.com/login?locale=en">Sign In</a>
+                    <a class="ui-nav-link" href="{{ route('login') }}">Sign In</a>
                 </div>
                 <div class="item">
-                    <a class="ui-button" href="https://dashboard.arbismart.com/register?locale=en"><span class="label">Get Started</span></a>
+                    <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
                 <ul id="menu-headerlang" class="navbar-nav ms-lg-auto"><li id="menu-item-language-en" class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom active-language menu-item-has-children menu-item-language-en"><a href="#" aria-current="page"><span>ENG</span></a>
                         <ul class="sub-menu">
@@ -187,11 +159,18 @@
             </div>
             <div class="section">
                 <div class="item">
-                    <a class="ui-nav-link" href="index.html">Home</a>
+                    <a class="ui-nav-link" href="{{ route('index') }}">Home</a>
                 </div>
-                <ul id="menu-header-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2194"><a href="interest/index.html">Wallet</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="smart-levels/index.html">Earn interest</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2193"><a href="exchange/index.html">Exchange</a></li>
+                <ul id="menu-header-1" class="menu">
+                    <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">Trading</a>
+                        <ul class="sub-menu">
+                            <li id="menu-item-2190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="{{ route('stocks')}}">Stocks</a></li>
+                            <li id="menu-item-2197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197"><a href="{{ route('crypto')}}">Crypto</a></li>
+                            <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('forex')}}">Forex</a></li>
+                            <li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="{{ route('arbitrage')}}">Arbitrage</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2193"><a href="{{ route('exchange') }}">Exchange</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2192"><a href="staking/index.html">Staking</a></li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="nfts/index.html">NFT</a></li>
                     <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
@@ -211,12 +190,12 @@
                     </li>
                 </ul>
                 <div class="item">
-                    <a class="ui-nav-link" href="https://dashboard.arbismart.com/login?locale=en">Sign In</a>
+                    <a class="ui-nav-link" href="{{ route('login') }}">Sign In</a>
                 </div>
             </div>
             <div class="section flex">
                 <div class="item">
-                    <a class="ui-button" href="https://dashboard.arbismart.com/register?locale=en"><span class="label">Get Started</span></a>
+                    <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
                 <div class="item">
                     <ul id="menu-headerlang-1" class="navbar-nav ms-lg-auto"><li class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom active-language menu-item-has-children menu-item-language-en"><a href="#" aria-current="page"><span>ENG</span></a>
@@ -249,7 +228,7 @@
                         </a>
                     </div>
                 </div>
-                
+
 
             </div>
             <div class="col-right">

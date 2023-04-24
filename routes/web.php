@@ -19,6 +19,7 @@ Route::view('/crypto', 'pages.trading.crypto')->name('crypto');
 Route::view('/forex', 'pages.trading.forex')->name('forex');
 Route::view('/metal', 'pages.trading.metal')->name('metal');
 Route::view('/arbitrage', 'pages.trading.arbitrage')->name('arbitrage');
+Route::view('/exchange', 'pages.exchange')->name('exchange');
 
 
 
