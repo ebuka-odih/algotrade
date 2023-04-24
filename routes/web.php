@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'pages.index')->name('index');
 Route::view('/stocks', 'pages.trading.stocks')->name('stocks');
 Route::view('/crypto', 'pages.trading.crypto')->name('crypto');
+Route::view('/forex', 'pages.trading.forex')->name('forex');
 
 
 

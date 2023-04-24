@@ -126,8 +126,8 @@
                     <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">Trading</a>
                         <ul class="sub-menu">
                             <li id="menu-item-2190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="{{ route('stocks')}}">Stocks</a></li>
-                            <li id="menu-item-2197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197"><a href="dao/index.html">DAO</a></li>
-                            <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="about/index.html">Company</a></li>
+                            <li id="menu-item-2197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197"><a href="{{ route('crypto')}}">Crypto</a></li>
+                            <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('forex')}}">Forex</a></li>
                             <li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="what-is-arbitrage/index.html">Arbitrage</a></li>
                         </ul>
                     </li>
