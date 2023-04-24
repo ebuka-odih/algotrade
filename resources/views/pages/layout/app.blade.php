@@ -117,7 +117,7 @@
         <div class="wrapper">
             <div class="col-left">
                 <div class="item">
-                    <a href="index.html" >
+                    <a href="{{ route('index') }}" >
                     <img class="logo" src="{{ asset('img/logo.png')}}" alt="">
                 </a></div>
             </div>
@@ -247,31 +247,12 @@
             <div class="col-left">
                 <div class="l-flex">
                     <div class="item l-mr-30">
-                        <a href="index.html" class="ui-logo"></a>
+                        <a href="{{ route('index')}}" >
+                            <img class="logo" src="{{ asset('img/logo.png')}}" alt="">
+                        </a>
                     </div>
                 </div>
-                <div class="app_section">
-                    <br>
-                    <strong>Download the app on Android or iOS</strong>
-                    <a target="_blank" href="https://arbismart.page.link/get-app">
-<span>
-<img class="default" src="wp-content/themes/arbismart_4.0/assets/images/app/app-store-badge-default6512.svg?11">
-<img class="active" src="wp-content/themes/arbismart_4.0/assets/images/app/app-store-badge-active.svg">
-</span>
-                    </a>
-                    <a target="_blank" href="https://arbismart.page.link/get-app">
-                        <img class="default" src="wp-content/themes/arbismart_4.0/assets/images/app/google-play-badge-default6512.svg?11">
-                        <img class="active" src="wp-content/themes/arbismart_4.0/assets/images/app/google-play-badge-active.svg">
-                    </a>
-                    <a class="qr-code" href="#">
-                        <img class="default" src="wp-content/themes/arbismart_4.0/assets/images/app/qr-code-btn-default6512.svg?11">
-                        <img class="active" src="wp-content/themes/arbismart_4.0/assets/images/app/qr-code-btn-active.svg">
-                    </a>
-                    <div class="app-tooltip">
-                        <span>Scan QR code to download the App</span>
-                        <img style="max-width: 100%" class="img-fluid" src="wp-content/themes/arbismart_4.0/assets/images/new/qr.png">
-                    </div>
-                </div>
+                
 
             </div>
             <div class="col-right">

@@ -19,9 +19,25 @@
     <p>
         Trade both listed and OTC trading stocks.</p>
     <div><br>
-    <a href="https://dashboard.arbismart.com/register/" class="ui-button ui-button--1 ui-button--large">
+        <div class="two_col right_two_col">
+			<strong>Exchange Traded Funds (ETFs)</strong>
+			<p>Replicate the performance of an index by investing in Exchange Traded Funds. Use screeners with over 30 different screening criteria options to help you find ETFs.</p>
+		</div>
+        <br>
+        <div class="two_col">
+			<strong>Penny Stocks to Large Cap Stocks</strong>
+			<p>Invest in large, mid, and small cap companies or penny stocks.</p>
+		</div>
+        <br>
+        <div class="two_col right_two_col">
+			<strong>Divided Reinvestment Programs</strong>
+			<p>Enroll in our dividend reinvestment programs at no additional charge and keep those dividends working.</p>
+		</div>
+        <br>
+    <a href="{{ route('register')}}" class="ui-button ui-button--1 ui-button--large">
     <span class="label">Join now</span>
     </a>
+    <br>
     </div>
     </div>
     <div class="col-right">
@@ -41,12 +57,9 @@
     Play to Earn<br>
     Make money just for playing games!
     </h2>
-    <p class="l-mb-50">
-    The funds you earn gaming in our metaverse can be transferred into your ArbiSmart wallet or used to make a wide array of in-game purchases.<br>
-    You can also buy NFTs and claim ownership of in-game items so as to boost your bottom line further, by selling or trading them.
-    </p>
+    
     <div>
-    <a href="https://dashboard.arbismart.com/register/" class="ui-button ui-button--1 ui-button--large ui-button--invert">
+    <a href="{{ route('register')}}" class="ui-button ui-button--1 ui-button--large ui-button--invert">
     <span class="label">Play now</span>
     </a>
     </div>
@@ -59,30 +72,7 @@
     </div>
     </div>
     </section>
-    <section class="ui-section--1 style--1">
-    <div class="container">
-    <div class="section--container">
-    <div class="col-left">
-    <div class="ui-frame--23">
-    <div class="frame"></div>
-    </div>
-    </div>
-    <div class="col-right">
-    <h2 class="l-mb-15">
-    Optimized Profit Potential
-    </h2>
-    <p class="l-mb-50 l-fs-16">
-    The entire ArbiSmart crypto hub is interconnected. This means that you can purchase an in-game item in our NFT marketplace for use in our metaverse. Use of one RBIS utility will be rewarded with exclusive terms elsewhere in the growing ArbiSmart ecosystem. So, for example if you hold an NFT, and then participate in our decentralized yield farming program, you will receive a higher APY.&nbsp;
-    </p>
-    <div>
-    <a href="https://dashboard.arbismart.com/register/" class="ui-button ui-button--1 ui-button--large">
-    <span class="label">Open an account</span>
-    </a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </section>
+    
     </main>
 
 @endsection
