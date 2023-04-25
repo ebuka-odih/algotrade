@@ -31,6 +31,7 @@
                             <p>These terms and conditions outline the rules and regulations for the use of Algotrade's Website.</p>
                             <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Algotrade if you do not agree to take all of the terms and conditions stated on this page.</p>
                             <p>If you have additional questions or require more information, do not hesitate to contact us through email at support@algo-trade.co.</p>
+                        
                         </article>
                     </div>
                 </div>

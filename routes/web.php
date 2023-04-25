@@ -23,6 +23,9 @@ Route::view('/exchange', 'pages.exchange')->name('exchange');
 Route::view('/nft', 'pages.nfts')->name('nft');
 Route::view('/about', 'pages.about')->name('about');
 Route::view('/contact', 'pages.contact')->name('contact');
+Route::view('/privacy-policy', 'pages.policy')->name('policy');
+Route::view('/terms-and-conditions', 'pages.terms')->name('terms');
+
 
 
 
