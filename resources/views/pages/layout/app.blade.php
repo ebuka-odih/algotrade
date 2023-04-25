@@ -113,10 +113,7 @@
                         <ul class="sub-menu">
 
                             <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('about') }}">Company</a></li>
-
-
-                            <li id="menu-item-1737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737"><a href="arbismart-license/index.html">Authorizations</a></li>
-
+                            
                             <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="faq/index.html">FAQ</a></li>
                             <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="contact/index.html">Support</a></li>
                         </ul>
