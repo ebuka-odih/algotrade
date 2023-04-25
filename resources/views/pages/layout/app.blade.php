@@ -124,10 +124,22 @@
                 <div class="item">
                     <a href="{{ route('index') }}" >
                     <img class="logo" src="{{ asset('img/logo.png')}}" alt="">
-                </a></div>
+                </a>
+            
+                </div>
+                {{-- <div id="google_translate_element"></div>
+                <script>
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                            pageLanguage: 'en'
+                        }, 'google_translate_element');
+                    }
+                </script> --}}
             </div>
             <div class="col-right lm-hide">
                 <ul id="menu-header" class="menu">
+                    <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('index') }}">Home</a></li>
+
                     <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">Trading</a>
                         <ul class="sub-menu">
                             <li id="menu-item-2190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="{{ route('stocks')}}">Stocks</a></li>
@@ -155,14 +167,7 @@
                     <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
                 <div class="item">
-                    <div id="google_translate_element"></div>
-                    <script>
-                        function googleTranslateElementInit() {
-                            new google.translate.TranslateElement({
-                                pageLanguage: 'en'
-                            }, 'google_translate_element');
-                        }
-                    </script>
+                   
                 </div>
                 
             </div>
@@ -193,6 +198,8 @@
                     <a class="ui-nav-link" href="{{ route('index') }}">Home</a>
                 </div>
                 <ul id="menu-header-1" class="menu">
+                    <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('index') }}">Home</a></li>
+
                     <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">Trading</a>
                         <ul class="sub-menu">
                             <li id="menu-item-2190" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="{{ route('stocks')}}">Stocks</a></li>
@@ -221,17 +228,7 @@
                     <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
                 <div class="item">
-                    <ul id="menu-headerlang-1" class="navbar-nav ms-lg-auto"><li class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom active-language menu-item-has-children menu-item-language-en"><a href="#" aria-current="page"><span>ENG</span></a>
-                            <ul class="sub-menu">
-                                <li class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-es"><a href="es/index.html"><span>ESP</span></a></li>
-                                <li class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-de"><a href="de/index.html"><span>DE</span></a></li>
-                                <li class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-it"><a href="it/index.html"><span>IT</span></a></li>
-                                <li class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-fr"><a href="fr/index.html"><span>FR</span></a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-
+                    
 
                 </div>
             </div>
