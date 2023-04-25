@@ -4,7 +4,9 @@
     <main>
         <section class="ui-section--1 ui-section--start">
             <div class="container">
+                
                 <div class="section--container">
+                    
                     <div class="col-left">
                         <h1 class="l-mb-15">
                             Take control of your<br> finances with<br> {{ env('APP_NAME') }}

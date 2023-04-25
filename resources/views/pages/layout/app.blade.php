@@ -71,7 +71,7 @@
     <link rel='stylesheet' id='responsive-css' href='{{ asset('wp-content/themes/arbismart_4.0/assets/css/responsive0ca6.css?v=1.92&amp;ver=2.0') }}' media='all' />
     <link rel='stylesheet' id='alert-css' href='{{ asset('wp-content/themes/arbismart_4.0/assets/plugins/alert/alertfaba.css?v=1&amp;ver=2.0') }}' media='all' />
     <link rel='stylesheet' id='animate-css' href='{{ asset('wp-content/themes/arbismart_4.0/assets/plugins/alert/animatefaba.css?v=1&amp;ver=2.0') }}' media='all' />
-    <link rel='stylesheet' id='form-css' href='{{ asset('wp-content/themes/arbismart_4.0/assets/plugins/forms/formsa4e3.css?v=1.1&amp;ver=2.0') }}' media='all' />
+    {{-- <link rel='stylesheet' id='form-css' href='{{ asset('wp-content/themes/arbismart_4.0/assets/plugins/forms/formsa4e3.css?v=1.1&amp;ver=2.0') }}' media='all' /> --}}
     <link rel="https://api.w.org/" href="wp-json/index.html" /><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/5.json" /><link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed148c.json?url=https%3A%2F%2Farbismart.com%2F" />
     <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed47c2?url=https%3A%2F%2Farbismart.com%2F&amp;format=xml" />
 
@@ -108,9 +108,25 @@
         .goog-te-gadget .goog-te-combo {
             background-color: rgb(107, 100, 100);
             color: white;
+        
         }
 
 
+    </style>
+    <style>
+        input, textarea, select {
+            background: rgba(79,89,193,.08);
+            border-radius: 8px;
+            border: 1px solid transparent;
+            min-height: 20px;
+            outline: none;
+            padding: 5px 24px;
+            font-size: 16px;
+            font-family: comfortaa,sans-serif;
+            color: #181a30;
+            cursor: pointer;
+            width: calc(100% - 48px);
+            }
     </style>
 
 </head>
@@ -125,9 +141,10 @@
                     <a href="{{ route('index') }}" >
                     <img class="logo" src="{{ asset('img/logo.png')}}" alt="">
                 </a>
-            
                 </div>
-                {{-- <div id="google_translate_element"></div>
+                
+            </div>
+            {{-- <div id="google_translate_element"></div>
                 <script>
                     function googleTranslateElementInit() {
                         new google.translate.TranslateElement({
@@ -135,7 +152,6 @@
                         }, 'google_translate_element');
                     }
                 </script> --}}
-            </div>
             <div class="col-right lm-hide">
                 <ul id="menu-header" class="menu">
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('index') }}">Home</a></li>
@@ -246,13 +262,23 @@
                         <a href="{{ route('index')}}" >
                             <img class="logo" src="{{ asset('img/logo.png')}}" alt="">
                         </a>
+                        <div  id="google_translate_element"></div>
+                        <script>
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({
+                                    pageLanguage: 'en'
+                                }, 'google_translate_element');
+                            }
+                        </script>
                     </div>
+                    
                 </div>
 
 
             </div>
             <div class="col-right">
-                <ul id="menu-footer-menu-1" class="ui-nav-menu menu"><li id="menu-item-1701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1701"><a href="{{ route('arbitrage')}}">Arbitrage</a></li>
+                <ul id="menu-footer-menu-1" class="ui-nav-menu menu">
+                    <li id="menu-item-1701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1701"><a href="{{ route('arbitrage')}}">Arbitrage</a></li>
                     <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702"><a href="{{route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1704"><a href="{{ route('contact')}}">Support</a></li>
                     <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="{{ route('about')}}">Company</a></li>
