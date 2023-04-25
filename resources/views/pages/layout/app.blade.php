@@ -109,30 +109,15 @@
 
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">NFT</a></li>
-                    <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
-                        <ul class="sub-menu">
-
-                            <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('about') }}">Company</a></li>
-                            
-                            <li id="menu-item-51" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="faq/index.html">FAQ</a></li>
-                            <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="contact/index.html">Support</a></li>
-                        </ul>
-                    </li>
+                    <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">About</a></li>
+                    
                 </ul> <div class="item">
                     <a class="ui-nav-link" href="{{ route('login') }}">Sign In</a>
                 </div>
                 <div class="item">
                     <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
                 </div>
-                <ul id="menu-headerlang" class="navbar-nav ms-lg-auto"><li id="menu-item-language-en" class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom active-language menu-item-has-children menu-item-language-en"><a href="#" aria-current="page"><span>ENG</span></a>
-                        <ul class="sub-menu">
-                            <li id="menu-item-language-es" class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-es"><a href="es/index.html"><span>ESP</span></a></li>
-                            <li id="menu-item-language-de" class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-de"><a href="de/index.html"><span>DE</span></a></li>
-                            <li id="menu-item-language-it" class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-it"><a href="it/index.html"><span>IT</span></a></li>
-                            <li id="menu-item-language-fr" class="wpm-languages menu-item menu-item-type-custom menu-item-object-custom menu-item-language-fr"><a href="fr/index.html"><span>FR</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
+                
             </div>
             <div class="col-right lm-show">
                 <div class="item">
