@@ -224,8 +224,9 @@
                     <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702"><a href="{{route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1704"><a href="{{ route('contact')}}">Support</a></li>
                     <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="{{ route('about')}}">Company</a></li>
-                </ul> <ul id="menu-footer-menu-2" class="ui-nav-menu menu"><li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="terms-and-conditions/index.html">Risk Policy</a></li>
-                </ul> <ul id="menu-footer-menu-3" class="ui-nav-menu menu"><li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a href="{{ route('terms')}}">Terms and Conditions</a></li>
+                </ul> 
+                
+                <ul id="menu-footer-menu-3" class="ui-nav-menu menu"><li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a href="{{ route('terms')}}">Terms and Conditions</a></li>
                     <li id="menu-item-2103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2103"><a href="{{ route('policy')}}">Privacy Policy</a></li>
                    
                 </ul> </div>
