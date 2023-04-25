@@ -202,21 +202,13 @@
                         </ul>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2193"><a href="{{ route('exchange') }}">Exchange</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2192"><a href="staking/index.html">Staking</a></li>
-                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="nfts/index.html">NFT</a></li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">NFT</a></li>
+                    <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
                         <ul class="sub-menu">
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2190"><a href="metaverse/index.html">Metaverse</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197"><a href="dao/index.html">DAO</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="about/index.html">Company</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="what-is-arbitrage/index.html">Arbitrage</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="partners/index.html">Partnership</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="career/index.html">Careers</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737"><a href="arbismart-license/index.html">Authorizations</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-754"><a href="arbismart-in-press/index.html">Arbismart in Press</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="blog/index.html">Blog</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51"><a href="faq/index.html">FAQ</a></li>
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="contact/index.html">Support</a></li>
+
+                            <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('about') }}">Company</a></li>
+                            
+                            <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="{{ route('contact')}}">Support</a></li>
                         </ul>
                     </li>
                 </ul>
