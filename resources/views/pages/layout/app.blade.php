@@ -225,7 +225,7 @@
             </div>
             <div class="col-right">
                 <ul id="menu-footer-menu-1" class="ui-nav-menu menu"><li id="menu-item-1701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1701"><a href="{{ route('arbitrage')}}">Arbitrage</a></li>
-                    <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702"><a href="smart-levels/index.html">Earn interest</a></li>
+                    <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702"><a href="{{route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1704"><a href="{{ route('contact')}}">Support</a></li>
                     <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="{{ route('about')}}">Company</a></li>
                 </ul> <ul id="menu-footer-menu-2" class="ui-nav-menu menu"><li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="terms-and-conditions/index.html">Risk Policy</a></li>
