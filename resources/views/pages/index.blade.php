@@ -9,7 +9,7 @@
                         <h1 class="l-mb-15">
                             Take control of your<br> finances with<br> {{ env('APP_NAME') }}
                         </h1>
-                        <p class="l-mb-50 lm-mb-30">A secure, <a href="arbismart-license/index.html">EU authorized,</a><br>
+                        <p class="l-mb-50 lm-mb-30">A secure, <a href="{{ route('register') }}">EU authorized,</a><br>
                             interest-generating wallet and exchange</p>
                         <div class="l-mb-50 lm-mb-30">
                             <a href="{{ route('register') }}" class="ui-button ui-button--1 ui-button--large">

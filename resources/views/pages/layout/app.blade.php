@@ -109,8 +109,15 @@
 
                     <li id="menu-item-53" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-53"><a href="{{ route('exchange') }}">Exchange</a></li>
                     <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">NFT</a></li>
-                    <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">About</a></li>
-                    
+                    <li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2191"><a href="{{ route('nft') }}">NFT</a></li>
+                    <li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-61"><a href="#">About Us</a>
+                        <ul class="sub-menu">
+
+                            <li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="{{ route('about') }}">Company</a></li>
+                            
+                            <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52"><a href="{{ route('contact')}}">Support</a></li>
+                        </ul>
+                    </li>
                 </ul> <div class="item">
                     <a class="ui-nav-link" href="{{ route('login') }}">Sign In</a>
                 </div>

@@ -22,6 +22,8 @@ Route::view('/arbitrage', 'pages.trading.arbitrage')->name('arbitrage');
 Route::view('/exchange', 'pages.exchange')->name('exchange');
 Route::view('/nft', 'pages.nfts')->name('nft');
 Route::view('/about', 'pages.about')->name('about');
+Route::view('/contact', 'pages.contact')->name('contact');
+
 
 
 
