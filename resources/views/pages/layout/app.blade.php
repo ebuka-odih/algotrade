@@ -224,13 +224,10 @@
 
             </div>
             <div class="col-right">
-                <ul id="menu-footer-menu-1" class="ui-nav-menu menu"><li id="menu-item-1701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1701"><a href="what-is-arbitrage/index.html">Arbitrage</a></li>
+                <ul id="menu-footer-menu-1" class="ui-nav-menu menu"><li id="menu-item-1701" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1701"><a href="{{ route('arbitrage')}}">Arbitrage</a></li>
                     <li id="menu-item-1702" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1702"><a href="smart-levels/index.html">Earn interest</a></li>
-                    <li id="menu-item-1703" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1703"><a href="partners/index.html">Partnership</a></li>
-                    <li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1704"><a href="contact/index.html">Support</a></li>
-                    <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="about/index.html">Company</a></li>
-                    <li id="menu-item-98" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-98"><a href="career/index.html">Careers</a></li>
-                    <li id="menu-item-1758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1758"><a href="roadmap/index.html">Roadmap</a></li>
+                    <li id="menu-item-1704" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1704"><a href="{{ route('contact')}}">Support</a></li>
+                    <li id="menu-item-95" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-95"><a href="{{ route('about')}}">Company</a></li>
                 </ul> <ul id="menu-footer-menu-2" class="ui-nav-menu menu"><li id="menu-item-106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106"><a href="terms-and-conditions/index.html">Risk Policy</a></li>
                     <li id="menu-item-107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-107"><a href="terms-and-conditions/index.html">Refund Policy</a></li>
                     <li id="menu-item-104" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-104"><a href="terms-and-conditions/index.html">KYC Policy</a></li>
@@ -238,10 +235,7 @@
                 </ul> <ul id="menu-footer-menu-3" class="ui-nav-menu menu"><li id="menu-item-1706" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1706"><a href="terms-and-conditions/index.html">Terms and Conditions</a></li>
                     <li id="menu-item-2273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2273"><a href="cookies-policy/index.html">Cookies Policy</a></li>
                     <li id="menu-item-2103" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2103"><a href="privacy-policy/index.html">Privacy Policy</a></li>
-                    <li id="menu-item-1708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1708"><a href="arbismart-license/index.html">Authorizations</a></li>
-                    <li id="menu-item-1709" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1709"><a href="blog/index.html">Blog</a></li>
-                    <li id="menu-item-1711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1711"><a href="faq/index.html">FAQ</a></li>
-                    <li id="menu-item-1710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1710"><a href="arbismart-in-press/index.html">Arbismart in Press</a></li>
+                   
                 </ul> </div>
         </div>
         <div class="sub-footer">
