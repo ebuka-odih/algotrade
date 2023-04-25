@@ -79,6 +79,39 @@
     <meta name="msapplication-TileImage" content="https://arbismart.com/wp-content/uploads/2020/02/favicon-arbismart.ico" />
 
     <script src="//code.jivosite.com/widget/f3pnGqtMGz" async></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <style>
+        #google_translate_element {
+
+            color: transparent;
+        }
+
+        #google_translate_element a {
+
+            display: none;
+        }
+
+        select.google_translate_element {
+
+            color: black;
+        }
+
+        div.goog-te-gadget {
+
+            color: transparent;
+        }
+
+        div.goog-te-gadget {
+
+            color: transparent !important;
+        }
+        .goog-te-gadget .goog-te-combo {
+            background-color: rgb(107, 100, 100);
+            color: white;
+        }
+
+
+    </style>
 
 </head>
 <body class="home page-template-default page page-id-5 language-en arbismart-home">
@@ -120,6 +153,16 @@
                 </div>
                 <div class="item">
                     <a class="ui-button" href="{{ route('register') }}"><span class="label">Get Started</span></a>
+                </div>
+                <div class="item">
+                    <div id="google_translate_element"></div>
+                    <script>
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({
+                                pageLanguage: 'en'
+                            }, 'google_translate_element');
+                        }
+                    </script>
                 </div>
                 
             </div>
