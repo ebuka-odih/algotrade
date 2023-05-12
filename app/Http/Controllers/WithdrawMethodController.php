@@ -11,8 +11,9 @@ class WithdrawMethodController extends Controller
 
     public function account()
     {
+        $user = Auth::user();
         $accounts = WithdrawMethod::whereUserId(auth()->id())->get();
-        return view('dashboard.user.account', compact('accounts'));
+        return view('dashboard.user.account', compact('accounts', 'user'));
     }
     public function accountUpdate(Request $request)
     {

@@ -28,8 +28,6 @@ Route::view('/terms-and-conditions', 'pages.terms')->name('terms');
 
 
 
-
-
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -43,6 +41,7 @@ Route::group(['middleware' => ['auth', 'verified'], 'prefix' => 'user', 'as' => 
     Route::post('update/security', "UserController@updateSecurity")->name('updateSecurity');
     Route::get('profile', "UserController@profile")->name('profile');
     Route::post('update/profile', "UserController@updateProfile")->name('updateProfile');
+
 
     Route::get('transactions', "TransactionController@transactions")->name('transactions');
     Route::get('transactions/deposit', "TransactionController@deposits")->name('deposits');

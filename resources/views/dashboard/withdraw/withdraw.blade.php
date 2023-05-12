@@ -21,7 +21,7 @@
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">Payment Method</span>
                                     <select name="payment_method_id" id="" class="form-control">
-                                        @foreach($payment_m as $item)
+                                        @foreach($payment_m ?? "No Payout Account" as $item)
                                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                                         @endforeach
                                     </select>

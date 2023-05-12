@@ -87,9 +87,9 @@
                         <div class="profile-tab">
                             <div class="custom-tab-1">
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li class="nav-item" role="presentation"><a href="#my-posts" data-bs-toggle="tab" class="nav-link active show" aria-selected="true" role="tab">Posts</a>
+                                    <li class="nav-item" role="presentation"><a href="{{ route('user.profile') }}"  class="nav-link active show" aria-selected="true" >Profile</a>
                                     </li>
-                                    <li class="nav-item" role="presentation"><a href="#about-me" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1" role="tab">About Me</a>
+                                    <li class="nav-item" role="presentation"><a href="{{ route('user.accounts') }}"  class="nav-link" aria-selected="false" >Payout Account</a>
                                     </li>
                                     <li class="nav-item" role="presentation"><a href="#profile-settings" data-bs-toggle="tab" class="nav-link" aria-selected="false" tabindex="-1" role="tab">Setting</a>
                                     </li>
